@@ -1,0 +1,69 @@
+{
+  "name": "baseline-sentinel",
+  "displayName": "Baseline Sentinel",
+  "publisher": "ZiaUrRehman1020",
+  "description": "Check web platform features for Baseline compatibility directly in VS Code.",
+  "version": "1.2.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "icon": "media/icon.png",
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meharzain2010/Baseline-Sentinel.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "baseline",
+    "compatibility",
+    "web features",
+    "standards",
+    "linter"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:baseline-sentinel.scanFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "baseline-sentinel.scanFile",
+        "title": "Baseline Sentinel: Scan Current File"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "baseline-sentinel-view",
+          "title": "Baseline Sentinel",
+          "icon": "media/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "baseline-sentinel-view": [
+        {
+          "id": "baselineSentinel.dashboard",
+          "name": "Dashboard"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/vscode": "^1.89.0",
+    "@vscode/vsce": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}
