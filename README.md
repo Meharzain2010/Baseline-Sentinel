@@ -1,4 +1,5 @@
 # Baseline Sentinel
+![Thumbnail](https://github.com/user-attachments/assets/d3fa60c9-33a4-457d-a01d-f6658300855b)
 
 A VS Code extension to check for web features compatibility and provide quick fixes for baseline compatibility issues.
 
